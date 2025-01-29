@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Fetcher</title>
+  <style>
+    :root {
+      --primary-bg: #121212;
+      --primary-text: #ffffff;
+      --secondary-bg: #1e1e1e;
+      --accent-color: #1a73e8;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+    }
+
+    header {
+      background-color: var(--secondary-bg);
+      color: var(--primary-text);
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    header h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    header h1 img {
+      height: 40px;
+    }
+
+    .search-bar {
+      background-color: var(--secondary-bg);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      border-bottom: 2px solid var(--accent-color);
+    }
+
+    .search-bar input {
+      width: 50%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      background-color: #333;
+      color: var(--primary-text);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .center-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .center-section video {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 8px;
+    }
+
+    .content-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .left-section {
+      flex: 1 1 25%;
+      max-width: 25%;
+    }
+
+    .left-section img {
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .right-section {
+      flex: 1 1 70%;
+      max-width: 70%;
+      background-color: var(--secondary-bg);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .right-section h2 {
+      color: var(--accent-color);
+    }
+
+    .right-section p, .right-section ul {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .right-section ul li {
+      margin-bottom: 10px;
+    }
+
+    .news-section {
+      margin-top: 20px;
+      width: 80%;
+      margin: 20px auto;
+    }
+
+    .news-item {
+      background-color: var(--secondary-bg);
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      color: var(--primary-text);
+    }
+
+    .news-item h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .news-item p {
+      margin: 5px 0;
+      color: #bbb;
+    }
+
+    .news-item a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .news-item a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="Colorful Live News Free Logo.png" alt="News Logo"> News Fetcher</h1>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="search" placeholder="Search news...">
+  </div>
+
+  <!-- Video Section -->
+  <div class="center-section">
+    <video controls>
+      <source src="Red Blue Bold Type Announcement Feature News Video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Content Section -->
+  <div class="container content-section">
+    <!-- Left Section with Images -->
+    <div class="left-section">
+      <img src="Colorful Live News Free Logo.png" alt="News Logo">
+      <img src="Yellow Podcast Show Logo.png" alt="Podcast Logo">
+    </div>
+
+    <!-- Right Section with Content -->
+    <div class="right-section">
+      <h2>Why is News Important?</h2>
+      <p>
+        News plays a vital role in keeping society informed, connected, and empowered. It provides updates on current events, helping individuals understand the world around them. Here's why news is essential:
+      </p>
+      <ul>
+        <li><b>Awareness of Current Events:</b> News keeps us informed about what's happening locally, nationally, and globally. From political changes to technological advancements, it ensures we're up-to-date with key events.</li>
+        <li><b>Empowering Decision-Making:</b> Accurate news empowers people to make informed decisions about their lives, whether it's about voting, financial choices, or health precautions.</li>
+        <li><b>Promotes Accountability:</b> News holds governments, corporations, and institutions accountable by highlighting their actions and decisions. Investigative journalism exposes corruption and protects democracy.</li>
+        <li><b>Bridges Communities:</b> By sharing stories of diverse groups, cultures, and experiences, news fosters understanding and unity. It connects people across borders and builds a global perspective.</li>
+        <li><b>Encourages Public Discussion:</b> News fuels meaningful conversations and debates, encouraging people to express their opinions and engage in society.</li>
+      </ul>
+
+      <h2>Why Are Podcasts Important?</h2>
+      <p>
+        Podcasts have become a powerful medium for sharing ideas, stories, and knowledge in today's fast-paced world. Here’s why they matter:
+      </p>
+      <ul>
+        <li><b>Accessible Learning Anytime, Anywhere:</b> Podcasts offer the flexibility to learn and stay informed on the go. Whether commuting, working out, or relaxing, podcasts allow listeners to make the most of their time.</li>
+        <li><b>Diverse Topics and Perspectives:</b> From technology to mental health, entertainment to business, podcasts cover every imaginable topic. They provide access to a wide range of voices and experiences, fostering learning and inclusivity.</li>
+        <li><b>Building Deep Connections:</b> Podcasts create a sense of intimacy between hosts and listeners. The conversational tone makes the content feel personal, building trust and a loyal audience.</li>
+        <li><b>Convenient and Free:</b> Most podcasts are free and easily accessible on multiple platforms. This makes them a cost-effective way to stay entertained and educated.</li>
+        <li><b>Encourages Storytelling and Creativity:</b> Podcasts are a platform for storytellers, creators, and experts to share their unique ideas. They give a voice to individuals and communities who might not have access to traditional media.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- News Fetching and Display -->
+  <div class="news-section" id="news-list">
+    <!-- News articles will be dynamically added here -->
+  </div>
+
+  <script>
+    const apiKey = '9ca4480b39184f57b287a6e5a8903cd5';
+    const newsList = document.getElementById('news-list');
+    const searchInput = document.getElementById('search');
+
+    async function fetchNews(query = '') {
+      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${apiKey}`;
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+
+        if (response.status !== 200) {
+          newsList.innerHTML = `<div>Error: ${data.message}</div>`;
+          console.error(`Error: ${data.message}`);
+          return;
+        }
+
+        displayNews(data.articles);
+      } catch (error) {
+        newsList.innerHTML = '<div>Error fetching news. Please try again later.</div>';
+        console.error('Fetch error:', error);
+      }
+    }
+
+    function displayNews(articles) {
+      newsList.innerHTML = '';  // Clear existing news
+      if (!articles || articles.length === 0) {
+        newsList.innerHTML = '<div>No news found.</div>';
+        return;
+      }
+      articles.forEach(article => {
+        const newsItem = document.createElement('div');
+        newsItem.className = 'news-item';
+        newsItem.innerHTML = `
+          <h3><a href="${article.url}" target="_blank">${article.title}</a></h3>
+          <p>${article.description || 'No description available.'}</p>
+        `;
+        newsList.appendChild(newsItem);
+      });
+    }
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim();
+      if (query.length > 2 || query.length === 0) {
+        fetchNews(query);
+      }
+    });
+
+    // Fetch initial news without any query
+    fetchNews();
+  </script>
+</body>
+</html>
